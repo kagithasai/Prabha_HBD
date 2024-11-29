@@ -1,0 +1,138 @@
+﻿OCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="x-icon" href="bld.png">
+<style>
+.body{
+  margin:0;
+  padding: 0;
+  
+  background: #fcd7fb;
+}
+
+#con{
+  background: white;
+  padding: 30px;
+  
+  border-top-right-radius:50px;
+ margin-top: 47vh;
+
+}
+
+
+.subdy{
+
+margin-top: 30%;
+margin-left: 20%;
+
+}
+#Pass{
+  padding: 8px;
+  width: 60%;
+    border-top: 0px;
+    
+    border-color: #9279BA;
+    border-right: 0px;
+    border-left: 0px;
+}
+#rutvi{
+  font-size: 34px;
+
+}
+h2{
+  font-size: 14px;
+  color: gray;
+}
+
+p{
+  font-size: 16px;
+  color: gray;
+  margin-top: 8px;
+  
+}
+
+.btn{
+  
+  
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  font-size: 8px;
+  margin-left: 70%;
+  
+}
+
+ .timer {
+      font-size: 24px;
+      font-weight: bold;
+    }
+@media screen and (max-width:600px){
+  #Pass{
+    margin-top: 10px;
+  }
+  }
+</style>
+</head>
+<body class="body">
+  <div class="subdy">
+  <label id="rutvi"><img class = "img"  >Hi There...!</label>
+
+
+<p>I hope this finds you in good health</p>
+
+
+
+</div>
+<div id="con">
+<form name="myForm" method="post"> 
+
+<input id="Pass"type="password" name="pass" placeholder="DD MM YYYY (DOB)"></form><br><br>
+<input type="button" name="log" class="btn" value="Log in..." onclick="myFunction()">
+</div>
+<!-- js --->
+<script type="text/javascript">
+  function myFunction(){
+   
+    var PS = document.forms["myForm"]["pass"].value;
+    if(PS=="01061999"){
+      window.location.href = "tree.html";
+    
+    }
+    else{
+      alert("💕Invalid.....try_ur_vl's💕")
+    }
+  }
+</script>
+<script>
+    function updateTimer() {
+      // Define the start date (January 1, 2000, midnight UTC)
+      const startDate = new Date(Date.UTC(1999, 11, 22, 0, 0, 0));      const now = new Date();
+
+      // Calculate the total elapsed time in milliseconds
+      const elapsedTime = now - startDate;
+
+      // Convert milliseconds to days, hours, minutes, and seconds
+      const totalSeconds = Math.floor(elapsedTime / 1000);
+      const totalMinutes = Math.floor(totalSeconds / 60);
+      const totalHours = Math.floor(totalMinutes / 60);
+      const days = Math.floor(totalHours / 24);
+      const hours = totalHours % 24;
+      const minutes = totalMinutes % 60;
+      const seconds = totalSeconds % 60;
+
+      // Update the timer display
+      document.getElementById("timer").textContent =
+        `${days} days, ${hours} hrs, ${minutes} min, ${seconds} sec`;
+    }
+
+    // Update the timer every second
+    setInterval(updateTimer, 1000);
+
+    // Initialize the timer
+    updateTimer();
+  </script>
+
+ 
+</body>
+</html>
