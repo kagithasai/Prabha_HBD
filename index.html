@@ -7,96 +7,103 @@
 .body{
   margin:0;
   padding: 0;
-  
+display: flex;
+      flex-direction: column;
+  width: auto;
   background: #fcd7fb;
+min-height: 100vh;
 }
 
 #con{
   background: white;
-  padding: 30px;
-  
-  border-top-right-radius:50px;
- margin-top: 47vh;
+padding-top: 12%;
+padding-left: 12%;
+  border-top-right-radius:20%;
+  width: auto;
+  height: 20vh;
+ 
 
 }
 
 
 .subdy{
-
-margin-top: 30%;
-margin-left: 20%;
-
+position: relative;
+width: auto;
+height: 65%;
+font-size: 90px;
+margin-left: 10%;
+margin-top: 40%;
+flex: 1;
 }
 #Pass{
-  padding: 8px;
+ 
   width: 60%;
+  padding: 2%;
     border-top: 0px;
-    
+    font-size: 36px;
     border-color: #9279BA;
     border-right: 0px;
     border-left: 0px;
-}
-#rutvi{
-  font-size: 34px;
-
-}
-h2{
-  font-size: 14px;
-  color: gray;
-}
-
-p{
-  font-size: 16px;
-  color: gray;
-  margin-top: 8px;
-  
 }
 
 .btn{
   
   
-  border-radius: 20px;
-  padding: 5px;
+  border-radius: 36px;
+  padding: 18px;
   color: black;
-  font-size: 8px;
+  font-size: 26px;
   margin-left: 70%;
+  margin-top: 26px;
   
 }
+
+#myAudio{
+  width: auto;
+  height: 1000px;
+}
+
+
+
+p{
+  font-size: 36px;
+  color: gray;
+ margin-top: -100px;
+  
+}
+
+
 
  .timer {
       font-size: 24px;
       font-weight: bold;
     }
-@media screen and (max-width:600px){
-  #Pass{
-    margin-top: 10px;
-  }
-  }
 </style>
 </head>
 <body class="body">
+  
   <div class="subdy">
-  <label id="rutvi"><img class = "img"  >Hi There...!</label>
+    
+    <h1>Hi <br>There...!</h1>
+    
+    <p>I hope this finds you in good health and high spirits</p>
+  </div>
 
-
-<p>I hope this finds you in good health</p>
-
-
-
-</div>
 <div id="con">
-<form name="myForm" method="post"> 
+   <form name="myForm" method="post"> 
 
-<input id="Pass"type="password" name="pass" placeholder="DD MM YYYY (DOB)"></form><br><br>
-<input type="button" name="log" class="btn" value="Log in..." onclick="myFunction()">
+    <input id="Pass"type="password" name="pass" placeholder="DD MM YYYY (DOB)"></form><br><br>
+    <input type="button" name="log" class="btn" value="Log in....." onclick="myFunction()">
 </div>
+
+
 <!-- js --->
 <script type="text/javascript">
   function myFunction(){
    
     var PS = document.forms["myForm"]["pass"].value;
     if(PS=="01061999"){
-      window.location.href = "index.html";
+      window.location.href = "wishes.html";
     
     }
     else{
@@ -104,6 +111,7 @@ p{
     }
   }
 </script>
+
 <script>
     function updateTimer() {
       // Define the start date (January 1, 2000, midnight UTC)
@@ -131,6 +139,9 @@ p{
 
     // Initialize the timer
     updateTimer();
+
+
+
   </script>
 
  
