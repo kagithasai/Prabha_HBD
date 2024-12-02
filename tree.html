@@ -50,23 +50,33 @@
                   <div id="clock"></div>
               </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
-                <p >
-                    Hi Dear, 💖💫
+                <p  id="hiddenParagraph">
+                    
+
+
+
+
 <br><br>
 
-You are such a cute, humble, and caring person. But let's be real—completely insane too! 😜😂 Even though many miles separate us, our hearts are never apart. 💌 No distance can stop the crazy bond we share. 🌍💖 We will be crazy, stupid, and weird best friends forever... and nothing can change that! 😆🤪
-<br><br>
-
-Wishing you a day as special and amazing as you are! 🌟🎉 May this year bring you endless happiness, laughter, and unforgettable moments. 🎂🎈 Thank you for being the most incredible person in my life. You deserve all the love and joy in the world! 💖
-<br><br>
-
-Happy Birthday, My Love! 🎉💝🎂❤️<br>
-You're my favorite human and my forever partner in crime! 💕👯‍♀️
-<br><br>
-Lots of love,<br>
-[Bhargav] 💖!
                              
                         </p>
+
+
+<div id="paragraphContainer" style="display: none;">
+    <p class="line">Hi Dear, 💖💫</p>
+    <p class="line"><br><br>
+
+You are such a cute, humble, and caring person. But let's be real—completely insane too! 😜😂 Even though many miles separate us, our hearts are never apart. 💌 No distance can stop the crazy bond we share. 🌍💖 We will be crazy, stupid, and weird best friends forever... and nothing can change that! 😆🤪</p>
+    <p class="line"><br>
+
+Wishing you a day as special and amazing as you are! 🌟🎉 May this year bring you endless happiness, laughter, and unforgettable moments. 🎂🎈 Thank you for being the most incredible person in my life. You deserve all the love and joy in the world! 💖
+<br><br></p>
+    <p class="line">Happy Birthday, My Love! 🎉💝🎂❤️<br></p>
+        <p  class="line">
+You're my favorite human and my forever partner in crime! 💕👯‍♀️</p>
+<p  class="line">Lots of love,<br>
+[Bhargav] 💖!</p>
+  </div>
 
 
                     </div>
@@ -78,9 +88,18 @@ Lots of love,<br>
     
     
 <style type="text/css">
-    p{
+    #paragraphContainer{
         font-size: 26px;
         margin: 26px;
+        margin-top: 200px;
+        
+    }
+    .line {
+      opacity: 0; /* Initially hidden */
+      transition: opacity 1s ease-in;
+
+    #wrap{
+        margin-top: 100px;
     }
 </style>
 
@@ -242,6 +261,20 @@ Lots of love,<br>
 
         runAsync().start();
     })();
+
+    setTimeout(() => {
+      // Display the container
+      const container = document.getElementById("paragraphContainer");
+      container.style.display = "block";
+
+      // Get all lines and fade them in one by one
+      const lines = container.querySelectorAll(".line");
+      lines.forEach((line, index) => {
+        setTimeout(() => {
+          line.style.opacity = 1; // Fade in
+        }, index * 2000); // Delay for each line (2 seconds)
+      });
+    }, 40000);
     </script></body></html>
 
 
